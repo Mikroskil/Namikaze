@@ -117,3 +117,27 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
+body h1 {
+  color: DarkBlue;
+}
+body h1 .bespoke-parent {
+  background: #fff;
+}
+.bespoke-slide {
+  background: #808080;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  -webkit-transform-origin: 50% 50% -400px;
+  transform-origin: 50% 50% -400px;
+}
+.bespoke-inactive {
+  opacity: 0;
+}
+.bespoke-before {
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+}
+.bespoke-after {
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
