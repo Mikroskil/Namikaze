@@ -117,6 +117,10 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
+<<<<<<< HEAD
+h1 {
+  color: #f00;
+=======
 body h1 {
   color: DarkBlue;
 }
@@ -140,4 +144,5 @@ body h1 .bespoke-parent {
 .bespoke-after {
   -webkit-transform: rotateY(90deg);
   transform: rotateY(90deg);
+>>>>>>> c3b68e5fb0d78bb524080bc66566dfdd25c88389
 }
