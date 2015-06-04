@@ -117,3 +117,6 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
+h1 {
+  color: #f00;
+}
