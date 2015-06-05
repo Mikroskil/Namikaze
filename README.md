@@ -1,3 +1,9 @@
+# Kelompok Kami "Namikaze"
+  1. Annisa Sharfina 
+  2. Riky Afandy
+  3. Muhammad Ricky Ramadhan Nst
+  4. Tsana' Arsyani
+
 # Hello World
 > A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
 
