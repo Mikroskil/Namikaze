@@ -6,7 +6,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #f8f8f4;
+	color: #f8f8f2;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	direction: ltr;
@@ -124,7 +124,7 @@ body h1 {
   background: #000;
 }
 .bespoke-slide {
-  background: #808083;
+  background: #808080;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-transform-origin: 50% 50% -400px;
@@ -133,7 +133,7 @@ body h1 {
 .bespoke-slide h2,
 h3,
 li {
-  color:#006;
+  color: Darkblue;
 }
 .bespoke-inactive {
   opacity: 0;
