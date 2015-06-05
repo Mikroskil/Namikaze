@@ -117,22 +117,23 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
-<<<<<<< HEAD
-h1 {
-  color: #f00;
-=======
 body h1 {
   color: DarkBlue;
 }
-body h1 .bespoke-parent {
-  background: #fff;
+.bespoke-parent {
+  background: #000;
 }
 .bespoke-slide {
   background: #808080;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   -webkit-transform-origin: 50% 50% -400px;
   transform-origin: 50% 50% -400px;
+}
+.bespoke-slide h2,
+h3,
+li {
+  color: Darkblue;
 }
 .bespoke-inactive {
   opacity: 0;
@@ -144,5 +145,4 @@ body h1 .bespoke-parent {
 .bespoke-after {
   -webkit-transform: rotateY(90deg);
   transform: rotateY(90deg);
->>>>>>> c3b68e5fb0d78bb524080bc66566dfdd25c88389
 }
