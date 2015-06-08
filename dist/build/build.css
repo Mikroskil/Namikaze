@@ -117,34 +117,23 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
+body h1 {
+  color: DarkBlue;
+}
 .bespoke-parent {
-  font-size: 1.5em;
-  background-image: url("http://fc01.deviantart.net/fs70/i/2010/166/5/9/Slipstream_by_FoxGirlJade.jpg");
-  background-size: 100% 100%;
-  color: $white;
-  font-family: $sans-serif;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  text-align: center;
-  -webkit-transition: background 1s ease;
-  transition: background 1s ease;
+  background: #000;
 }
 .bespoke-slide {
-  background: none;
+  background: #808080;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-transform-origin: 50% 50% -400px;
   transform-origin: 50% 50% -400px;
 }
-.bespoke-slide h1,
-h2,
+.bespoke-slide h2,
 h3,
 li {
-  color: White;
+  color: Darkblue;
 }
 .bespoke-slide ul,
 .bespoke-slide ol {
