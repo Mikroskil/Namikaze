@@ -135,6 +135,10 @@ h3,
 li {
   color: Darkblue;
 }
+.bespoke-slide ul,
+.bespoke-slide ol {
+  text-align: left;
+}
 .bespoke-inactive {
   opacity: 0;
 }
