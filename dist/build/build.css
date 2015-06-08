@@ -42,3 +42,10 @@ li {
   -webkit-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
+li {
+  list-style: circle;
+  margin: 0.2em;
+  font-style: normal;
+  -webkit-transform: translateX(-4px);
+  transform: translateX(-4px);
+}
