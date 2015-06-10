@@ -48,4 +48,5 @@ li {
   font-style: normal;
   -webkit-transform: translateX(-4px);
   transform: translateX(-4px);
+  font-size: 16px;
 }
