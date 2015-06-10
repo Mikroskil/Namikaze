@@ -42,6 +42,9 @@ li {
   -webkit-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
+img#wpap {
+  margin-top: 30px;
+}
 li {
   list-style: circle;
   margin: 0.2em;
