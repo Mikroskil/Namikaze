@@ -20,12 +20,16 @@
   transition: all 0.5s ease;
   -webkit-transform-origin: 50% 50% -400px;
   transform-origin: 50% 50% -400px;
+  margin-bottom: -285px;
 }
 .bespoke-slide h1,
 h2,
 h3,
 li {
   color: #000;
+}
+img#wpap {
+  margin-top: 213px;
 }
 .bespoke-slide ul,
 .bespoke-slide ol {
