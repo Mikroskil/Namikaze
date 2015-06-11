@@ -29,6 +29,11 @@
   margin-top: 70px;
   font-size: 30px;
 }
+.bespoke-slide h1,
+h2 {
+  margin-top: 70px;
+  font-size: 35px;
+}
 h3,
 li {
   color: #000;
