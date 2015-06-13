@@ -51,4 +51,15 @@ li {
   font-style: normal;
   -webkit-transform: translateX(-4px);
   transform: translateX(-4px);
+  font-size: 18px;
+}
+h1#present {
+  text-align: Right;
+  font-family: times new roman;
+  margin-right: -667px;
+  font-size: 20px;
+  margin-bottom: -30px;
+}
+img#teknik {
+  margin-top: 30px;
 }
