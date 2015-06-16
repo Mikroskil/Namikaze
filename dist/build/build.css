@@ -160,3 +160,28 @@ img#teknik1 {
   margin-bottom: -30px;
   margin-left: -28px;
 }
+.bespoke-progress-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+@media only screen and (max-width: 400px) {
+  .bespoke-progress-parent {
+    height: 8px;
+  }
+}
+@media print {
+  .bespoke-progress-parent {
+    display: none;
+  }
+}
+.bespoke-progress-bar {
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+  position: absolute;
+  height: 100%;
+  background: -webkit-radial-gradient(circle, #ffc0cb, #800080);
+  background: radial-gradient(circle, #ffc0cb, #800080);
+}

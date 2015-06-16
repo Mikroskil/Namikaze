@@ -140,3 +140,20 @@ img#teknik1
   margin-bottom: -30px;
   margin-left: -28px;
 }
+
+.bespoke-progress-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 16px
+  @media only screen and (max-width: 400px)
+    height: 8px
+  @media print
+    display: none
+
+.bespoke-progress-bar
+  transition: width .6s ease
+  position: absolute
+  height: 100%
+  background: radial-gradient(circle,pink,purple)
