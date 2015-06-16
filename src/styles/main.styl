@@ -1,26 +1,85 @@
-.bespoke-parent {
+slide_width = 640px
+slide_height = 480px
+slide_background = #2ecc71
+
+slide_transition_length = .62s
+slide_transition_easing = ease-in-out
+slide_transition_rotate_y = 120deg
+// Safari bugs out on 3d transform-origins, so we have to fake it
+slide_transition_nudge_x = -130px
+
+bullet_transition_length = .3s
+bullet_transition_easing = ease
+bullet_transition_translate_x = 16px
+
+// base
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+@media print
+  *
+    -webkit-print-color-adjust: exact
+
+@page
+  size: landscape
+  margin: 0
+
+// bespoke.js layout styles
+
+.bespoke-parent
   font-size: 1.5em;
-  background-image:url(../images/TES.png);
+  background:url(../images/TES.png);
   background-size: 100% 100%;
   color: $white;
-  font-family: $sans-serif;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  text-align: center;
-  -webkit-transition: background 1s ease;
-  transition: background 1s ease;
-}
-.bespoke-slide {
-  background: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-transform-origin: 50% 50% -400px;
-  transform-origin: 50% 50% -400px;
-}
+  font-family:'Lato', Calibri, Arial, sans-serif;
+  transition: background slide_transition_length slide_transition_easing
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  overflow: hidden
+  @media print
+    overflow: visible
+    position: static
+  perspective: 600px
+
+
+.bespoke-slide
+  transition:
+    transform slide_transition_length slide_transition_easing,
+    opacity slide_transition_length slide_transition_easing,
+    background slide_transition_length slide_transition_easing
+  transform-origin: 50% 50% 0
+  backface-visibility: hidden
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  width: slide_width
+  font-family:'Lato', Calibri, Arial, sans-serif;
+  height: slide_height
+  position: absolute
+  top: 50%
+  margin-top: (slide_height / 2) * -1
+  left: 50%
+  margin-left: (slide_width / 2) * -1
+  background: radial-gradient(circle,white, blue);
+  padding: 40px
+  border-radius: 0
+  @media print
+    zoom: 1 !important // disable bespoke-scale
+    height: 743px // seems to correspond with an A4, landscape page height
+    width: 100%
+    page-break-before: always
+    position: static
+    margin: 0
+    transition: none
+
 .bespoke-slide h1,
 h2
 { margin-top : 70px;
@@ -34,18 +93,28 @@ li {
 .bespoke-slide ol {
   text-align: left;
 }
-.bespoke-inactive {
-  opacity: 0;
-}
-.bespoke-before {
-  -webkit-transform: rotateY(-90deg);
-  transform: rotateY(-90deg);
-}
-.bespoke-after {
-  -webkit-transform: rotateY(90deg);
-  transform: rotateY(90deg);
-}
+.bespoke-active
+  transition-delay: .4s
 
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-before
+  transform: translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
+  @media print
+    transform: none
+
+.bespoke-after
+  transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
+  @media print
+    transform: none
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+  @media print
+    opacity 1
 
 li
   list-style: circle
@@ -57,8 +126,7 @@ li
 h1#present
   text-align: Right;
   font-family: times new roman;
-  margin-right: -667px;
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: -30px;
 
 img#teknik

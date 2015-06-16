@@ -1,25 +1,90 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+}
+@page {
+  size: landscape;
+  margin: 0;
+}
 .bespoke-parent {
   font-size: 1.5em;
-  background-image: url("../images/TES.png");
+  background: url("../images/TES.png");
   background-size: 100% 100%;
   color: $white;
-  font-family: $sans-serif;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  -webkit-transition: background 0.62s ease-in-out;
+  transition: background 0.62s ease-in-out;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   overflow: hidden;
-  text-align: center;
-  -webkit-transition: background 1s ease;
-  transition: background 1s ease;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+}
+@media print {
+  .bespoke-parent {
+    overflow: visible;
+    position: static;
+  }
 }
 .bespoke-slide {
-  background: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-transform-origin: 50% 50% -400px;
-  transform-origin: 50% 50% -400px;
+  -webkit-transition: -webkit-transform 0.62s ease-in-out, opacity 0.62s ease-in-out, background 0.62s ease-in-out;
+  transition: transform 0.62s ease-in-out, opacity 0.62s ease-in-out, background 0.62s ease-in-out;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 640px;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  margin-top: -240px;
+  left: 50%;
+  margin-left: -320px;
+  background: -webkit-radial-gradient(circle, #fff, #00f);
+  background: radial-gradient(circle, #fff, #00f);
+  padding: 40px;
+  border-radius: 0;
+}
+@media print {
+  .bespoke-slide {
+    zoom: 1 !important;
+    height: 743px;
+    width: 100%;
+    page-break-before: always;
+    position: static;
+    margin: 0;
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 .bespoke-slide h1,
 h2 {
@@ -34,16 +99,42 @@ li {
 .bespoke-slide ol {
   text-align: left;
 }
+.bespoke-active {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
 .bespoke-inactive {
   opacity: 0;
+  pointer-events: none;
 }
 .bespoke-before {
-  -webkit-transform: rotateY(-90deg);
-  transform: rotateY(-90deg);
+  -webkit-transform: translateX(130px) translateX(-320px) rotateY(-120deg) translateX(-320px);
+  transform: translateX(130px) translateX(-320px) rotateY(-120deg) translateX(-320px);
+}
+@media print {
+  .bespoke-before {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 .bespoke-after {
-  -webkit-transform: rotateY(90deg);
-  transform: rotateY(90deg);
+  -webkit-transform: translateX(-130px) translateX(320px) rotateY(120deg) translateX(320px);
+  transform: translateX(-130px) translateX(320px) rotateY(120deg) translateX(320px);
+}
+@media print {
+  .bespoke-after {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.bespoke-inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+@media print {
+  .bespoke-inactive {
+    opacity: 1;
+  }
 }
 li {
   list-style: circle;
@@ -56,8 +147,7 @@ li {
 h1#present {
   text-align: Right;
   font-family: times new roman;
-  margin-right: -667px;
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: -30px;
 }
 img#teknik {
